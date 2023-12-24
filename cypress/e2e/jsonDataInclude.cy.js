@@ -12,7 +12,7 @@ describe('Data fetch from Fixtures', function () {
         cy.wait(3000)
         cy.get('.oxd-button').click()
         cy.wait(3000)
-        cy.get('.oxd-alert-content').contains('Invalid credentials')
+        cy.get('.oxd-alert-content').should("have.text",'Invalid credentials')
         cy.screenshot()
       })
     })
